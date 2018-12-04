@@ -9,12 +9,7 @@ git:
   quiet: true
 
 before_script:
-- wget https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
-- unzip chromedriver_linux64.zip 
-- sudo mv -f ~/chromedriver /usr/local/share/
-- sudo chmod +x /usr/local/share/chromedriver
-- sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
-- export CHROME_BIN=chromium-browser
+{BLT_DIR}/scripts/linux/install-chrome.sh ${COMPOSER_BIN}
 
 addons:
   apt:
