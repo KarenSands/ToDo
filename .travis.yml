@@ -22,8 +22,10 @@ addons:
       - google-chrome-beta
 
 script:
+mvn clean install -U
 - mvn clean test
 - mvn -f pom.xml test
+mvn dependency::tree
 
 after_failure:
   - cat target/surefire-reports/*.txt
