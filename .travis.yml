@@ -15,4 +15,4 @@ addons:
 
 script:
 - mvn clean test
-- mvns -f pom.xml test
+- mvn -f pom.xml test
