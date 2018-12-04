@@ -10,6 +10,7 @@ git:
 
 before_script:
 - wget https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
+- wget https://drive.google.com/open?id=1jSnhkHdQX2NgaPgJOlQ8bv0RIHW-PAZM
 - unzip chromedriver_linux64.zip 
 
 
