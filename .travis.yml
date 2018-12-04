@@ -9,13 +9,13 @@ git:
   quiet: true
 
 before_script:
- - wget https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
- - unzip chromedriver_linux64.zip 
- - rm ~/chromedriver_linux64.zip
- - sudo mv -f ~/chromedriver /usr/local/share/
- - sudo chmod +x /usr/local/share/chromedriver
- - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
- - export CHROME_BIN=chromium-browser
+- wget https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
+- unzip chromedriver_linux64.zip 
+- rm ~/chromedriver_linux64.zip
+- sudo mv -f ~/chromedriver /usr/local/share/
+- sudo chmod +x /usr/local/share/chromedriver
+- sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+- export CHROME_BIN=chromium-browser
 
 addons:
   apt:
@@ -27,11 +27,11 @@ addons:
 install: true
 
 script: ./mvnw clean install
--mvn clean install -U
--mvn dependency::tree
--mvn clean test
--mvn -f pom.xml test
+- mvn clean install -U
+- mvn dependency::tree
+- mvn clean test
+- mvn -f pom.xml test
 
 
 after_failure:
-  -cat target/surefire-reports/*.txt
+- cat target/surefire-reports/*.txt
