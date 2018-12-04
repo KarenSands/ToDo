@@ -21,7 +21,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TestIndex {
-    private static final String URL = "https://mylistapp.000webhostapp.com/index.php";//
+    private static final String URL = "http://127.0.0.1/MyList/index.php";//
     private static ChromeDriver driver;
     public TestIndex() {
     }
