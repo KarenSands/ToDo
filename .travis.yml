@@ -1,11 +1,18 @@
 language: java
 
+build: trusty
+
 jdk:
 - oraclejdk8
 
 git:
   quiet: true
 
+before_script:
+- wget https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
+- unzip chromedriver_linux64.zip -d 
+/home/travis/virtualenv/java/bin/
+- export CHROME_BIN=chromium-browser
 addons:
   apt:
     sources:
