@@ -13,6 +13,7 @@ before_script:
 - unzip chromedriver_linux64.zip -d 
 /home/travis/virtualenv/java/bin/
 - export CHROME_BIN=chromium-browser
+
 addons:
   apt:
     sources:
@@ -23,3 +24,6 @@ addons:
 script:
 - mvn clean test
 - mvn -f pom.xml test
+
+after_failure:
+  - cat target/surefire-reports/*.txt
