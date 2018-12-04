@@ -26,7 +26,8 @@ addons:
 
 install: true
 
-script: ./mvnw clean install
+script: 
+- ./mvnw clean install
 - mvn clean install -U
 - mvn dependency::tree
 - mvn clean test
