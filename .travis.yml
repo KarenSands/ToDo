@@ -12,3 +12,7 @@ addons:
       - google-chrome
     packages:
       - google-chrome-beta
+
+script:
+- mvn clean test
+- mvns -f pom.xml test
