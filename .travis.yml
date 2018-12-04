@@ -9,10 +9,10 @@ git:
   quiet: true
 
 before_script:
-- wget https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
-- unzip chromedriver_linux64.zip -d 
+-wget https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
+-unzip chromedriver_linux64.zip -d 
 /home/travis/virtualenv/java/bin/
-- export CHROME_BIN=chromium-browser
+-export CHROME_BIN=chromium-browser
 
 addons:
   apt:
@@ -23,10 +23,10 @@ addons:
 
 script:
 -mvn clean install -U
-- mvn dependency::tree
+-mvn dependency::tree
 -mvn clean test
-- mvn -f pom.xml test
+-mvn -f pom.xml test
 
 
 after_failure:
-  - cat target/surefire-reports/*.txt
+  -cat target/surefire-reports/*.txt
