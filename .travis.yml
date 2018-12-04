@@ -9,7 +9,9 @@ git:
   quiet: true
 
 before_script:
-{BLT_DIR}/scripts/linux/install-chrome.sh ${COMPOSER_BIN}
+- wget https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
+- unzip chromedriver_linux64.zip 
+
 
 addons:
   apt:
